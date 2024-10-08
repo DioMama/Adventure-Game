@@ -246,19 +246,51 @@ MonoBehaviour:
   moveAction:
     m_Name: Move
     m_Type: 0
-    m_ExpectedControlType: 
+    m_ExpectedControlType: Vector2
     m_Id: 30c3ceee-a358-434a-9ef8-1f3b8abff3ec
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: fabe6728-be50-4e99-83df-6fe5448a5f0b
+    - m_Name: 2D Vector
+      m_Id: c54e594f-6bdf-4fe2-b71e-39a1dc71be2b
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 72f77679-a526-4c00-9526-79968e09284a
       m_Path: <Keyboard>/w
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move
-      m_Flags: 0
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 7c84b353-ae70-4066-b4a5-7789dc664ed2
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 4d386ba7-d3f9-4a1b-aa41-6352d7efa24c
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: d4fad714-29b9-425c-9ee3-41f5f5602258
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
     m_Flags: 0
 --- !u!4 &48898881
 Transform:
