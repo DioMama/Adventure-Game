@@ -8,6 +8,10 @@ public class Dog : MonoBehaviour
     public InputAction moveAction;
     public float speed = 4;
     // Start is called before the first frame update
+
+    //외부에서 게임오브젝트를 받기 위해 선언한 변수
+    public GameObject bed;
+
     void Start()
     {
         //moveAction.Enable();을 해줘야 moveAction을 쓸 수 있음
@@ -27,6 +31,18 @@ public class Dog : MonoBehaviour
             Vector3 direction = movement.normalized;
             Debug.Log($"direction: {direction} ");
             transform.position += direction * Time.deltaTime * speed;
+
+            DataManager.Instance.Print();
+            int day = DataManager.Instance.GetDay();
+            Debug.Log("Day: " + day);
         }
+
+        float distance = Vector3.Distance(bed.transform.position, transform.position);
+
+        if (distance < 1.0f)
+        {
+            DataManager.Instance.AddDay();
+        }
+    
     }
 }
